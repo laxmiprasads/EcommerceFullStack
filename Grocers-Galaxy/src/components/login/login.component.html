@@ -1,0 +1,15 @@
+<div class="login-container">
+  <h1>Login</h1>
+  <form class="login-box">
+    <div class="input-group">
+      <label class="input-label">Username</label>
+      <input class="input-field" name="username" placeholder="username" type="text" name="username" [(ngModel)]="username" />
+    </div>
+    <div class="input-group">
+      <label class="input-label">Password</label>
+      <input class="input-field" name="password" placeholder="password" type="password" name="password" [(ngModel)]="password" />
+    </div>
+    <button (click)="gotohome()" class="login-btn">Login</button>
+    <p class="newuserline" (click)="gotosignup()">New User? <span class="signup">Sign up</span></p>
+  </form>
+</div>

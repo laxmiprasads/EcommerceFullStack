@@ -1,0 +1,78 @@
+<div class="login-container">
+  <h1>Sign Up</h1>
+  <!-- Template-driven form binding -->
+  <form #signupForm="ngForm" class="login-box" (ngSubmit)="signup()" novalidate>
+    
+    <!-- Username -->
+    <div class="input-group">
+      <label class="input-label">Username</label>
+      <input class="input-field"
+             type="text"
+             name="username"
+             [(ngModel)]="username"
+             required
+             minlength="3"
+             #usernameCtrl="ngModel"
+             placeholder="username" />
+      <!-- Validation messages -->
+      <div class="error" style="color: red;" *ngIf="usernameCtrl.invalid && usernameCtrl.touched">
+        <small *ngIf="usernameCtrl.errors?.['required']">*Username is required.</small>
+        <small *ngIf="usernameCtrl.errors?.['minlength']">*Username must be at least 3 characters.</small>
+      </div>
+    </div>
+
+    <!-- Password -->
+    <div class="input-group">
+      <label class="input-label">Password</label>
+      <input class="input-field"
+             type="password"
+             name="password"
+             [(ngModel)]="password"
+             required
+             minlength="6"
+             #passwordCtrl="ngModel"
+             placeholder="password" />
+      <div class="error" style="color: red;" *ngIf="passwordCtrl.invalid && passwordCtrl.touched">
+        <small *ngIf="passwordCtrl.errors?.['required']">*Password is required.</small>
+        <small *ngIf="passwordCtrl.errors?.['minlength']">*Password must be at least 6 characters.</small>
+      </div>
+    </div>
+
+    <!-- Email -->
+    <div class="input-group">
+      <label class="input-label">Email</label>
+      <input class="input-field"
+             type="email"
+             name="email"
+             [(ngModel)]="email"
+             required
+             email
+             #emailCtrl="ngModel"
+             placeholder="email" />
+      <div class="error" style="color: red;" *ngIf="emailCtrl.invalid && emailCtrl.touched">
+        <small *ngIf="emailCtrl.errors?.['required']">*Email is required.</small>
+        <small *ngIf="emailCtrl.errors?.['email']">*Enter a valid email address.</small>
+      </div>
+    </div>
+
+    <!-- Role -->
+    <div class="input-group">
+      <label class="input-label">Role</label>
+      <select class="selectrole"
+              name="role"
+              [(ngModel)]="role"
+              required
+              #roleCtrl="ngModel">
+        <option value="" disabled selected>Select role</option>
+        <option value="user">User</option>
+        <option value="admin">Admin</option>
+      </select>
+      <div class="error"style="color: red;" *ngIf="roleCtrl.invalid && roleCtrl.touched">
+        <small>*Role is required.</small>
+      </div>
+    </div>
+
+    <!-- Submit Button -->
+    <button class="login-btn" type="submit">Sign Up</button>
+  </form>
+</div>

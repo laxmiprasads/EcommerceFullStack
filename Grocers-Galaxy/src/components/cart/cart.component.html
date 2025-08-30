@@ -1,0 +1,21 @@
+<ul *ngIf="role == 'user'" class="products">
+  <h1 class="emptymsg" *ngIf="cartproducts.length === 0">🚫 Cart is empty.</h1>
+  <li class="product" *ngFor="let product of cartproducts; let i = index">
+    <h4>Title: {{product.title}}</h4>
+    <p>Price: {{product.price | currency:'INR'}}</p>
+            <p>Description
+              <ng-container *ngIf="expandedId === product.id!; else shortDesc">
+                {{ product.description }}
+              </ng-container>
+              <ng-template #shortDesc>
+                {{ product.description | slice: 0: 60 }}...
+              </ng-template>
+              <span (click)="toggleDescription(product.id!)" class="shows-btn">
+                {{ expandedId === product.id ? 'show less' : 'show more' }}
+              </span>
+            </p>
+    <p>Brand: {{product.brand}}</p>
+    <p>Status: {{product.status}}</p>
+    <button (click)="removeFromCart(product.id!)"  class="delbtn">Delete</button>
+  </li>
+</ul>

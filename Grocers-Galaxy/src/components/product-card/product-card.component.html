@@ -1,0 +1,41 @@
+<div class="elements">
+  <input type="text" placeholder="Search Products" (input)="filteredProducts()" [(ngModel)]="searchitem"/>
+  <div>
+    <label>
+      <input type="radio" name="category" (change)="filteredProducts()" [(ngModel)]="category" value="allproducts" /> All products
+    </label>
+    <label>
+      <input type="radio" name="category" (change)="filteredProducts()" [(ngModel)]="category" value="instock" /> Instock
+    </label>
+    <label>
+      <input type="radio" name="category" (change)="filteredProducts()" [(ngModel)]="category" value="outofstock"/> Out of stock
+    </label>
+  </div>
+  <button *ngIf="role == 'user'" class="cartbtn" (click)="viewcart()">{{showcart ? 'Home' : '🛒 Cart'}}</button>
+</div>
+
+<ul *ngIf="!showcart" class="products">
+  <li class="product" *ngFor="let product of filteredProducts(); let i = index">
+    <p><span class="details">Title:</span> {{product.title}}</p>
+    <p><span class="details">Price:</span> {{product.price | currency:'INR'}}</p>
+    <p><span class="details">Description:</span>
+      <ng-container *ngIf="expandedId === product.id; else shortDesc">
+        {{ product.description }}
+      </ng-container>
+      <ng-template #shortDesc>
+        {{ product.description | slice: 0: 60 }}...
+        
+      </ng-template>
+      <span (click)="toggleDescription(product.id!)" class="shows-btn">
+        {{ expandedId === product.id ? 'show less' : 'show more' }}
+      </span>
+    </p>
+   <p><span class="details">Brand:</span> {{product.brand}}</p>
+    <p [appStockHighlight]="product.stock"><span class="details">Stock:</span> {{product.stock}}</p>
+    <button *ngIf="role == 'user' && product.stock > 0" class="atcbtn" (click)="atcbtn(product)">Add to Cart</button>
+    <!-- <button *ngIf="role == 'admin'" class="delbtn" (click)="onincrease(product.id!)">Increase Quantity</button> -->
+    <button *ngIf="role == 'admin'" class="delbtn" (click)="ondelete(product.id!)">Delete</button>
+  </li>
+</ul>
+
+<app-cart *ngIf="showcart" [cartproducts]="cartproducts"></app-cart>

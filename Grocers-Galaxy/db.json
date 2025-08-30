@@ -1,0 +1,157 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "title": "Essence Mascara Lash Princess",
+      "price": 1999,
+      "description": "The Essence Mascara Lash Princess is a popular mascara known for its volumizing and lengthening effects. Achieve dramatic lashes with this long-lasting and cruelty-free formula.",
+      "brand": "Essence",
+      "status": "Instock",
+      "stock": 99
+    },
+    {
+      "id": "2",
+      "title": "Maybelline Fit Me Matte + Poreless Foundation",
+      "price": 7499,
+      "description": "The Maybelline Fit Me Matte + Poreless Foundation is a lightweight foundation that provides a natural matte finish. It is designed to control shine and minimize the appearance of pores.",
+      "brand": "Maybelline",
+      "status": "Out of stock",
+      "stock": 0
+    },
+    {
+      "id": "3",
+      "title": "L'Oreal Paris Infallible Pro-Matte Liquid Lipstick",
+      "price": 9449,
+      "description": "The L'Oreal Paris Infallible Pro-Matte Liquid Lipstick offers long-lasting, matte color with a comfortable feel. It is available in a variety of shades to suit different preferences.",
+      "brand": "L'Oreal Paris",
+      "status": "Instock",
+      "stock": 75
+    },
+    {
+      "id": "4",
+      "title": "NYX Professional Makeup Ultimate Shadow Palette",
+      "price": 1799,
+      "description": "The NYX Professional Makeup Ultimate Shadow Palette features a range of highly pigmented eyeshadows in various finishes, perfect for creating versatile eye looks.",
+      "brand": "NYX",
+      "status": "Out of stock",
+      "stock": 0
+    },
+    {
+    "id": "5d6e",
+    "title": "Jeans",
+    "price": 2499,
+    "description": "Blue solid mid-rise jeans, has a button and zip closure, 5 pockets, straight hem, and is made of cotton blend.",
+    "brand": "Levi's",
+    "status": "Out of stock",
+    "stock": 0
+  },
+  {
+    "id": "8a3f",
+    "title": "T-Shirt",
+    "price": 899,
+    "description": "Classic white cotton t-shirt with round neck, short sleeves, and regular fit. Comfortable everyday wear.",
+    "brand": "H&M",
+    "status": "Instock",
+    "stock": 45
+  },
+  {
+    "id": "c1b2",
+    "title": "Sneakers",
+    "price": 3499,
+    "description": "Black lace-up sneakers with cushioned sole, breathable mesh upper, and rubber outsole for durability.",
+    "brand": "Nike",
+    "status": "Instock",
+    "stock": 22
+  },
+  {
+    "id": "f7e9",
+    "title": "Jacket",
+    "price": 4999,
+    "description": "Olive green bomber jacket with front zip closure, ribbed cuffs, and side pockets. Made from polyester.",
+    "brand": "Zara",
+    "status": "Instock",
+    "stock": 55
+  },
+  {
+    "id": "9d4k",
+    "title": "Wrist Watch",
+    "price": 5999,
+    "description": "Analog wristwatch with leather strap, stainless steel dial, and water resistance up to 50 meters.",
+    "brand": "Fossil",
+    "status": "Instock",
+    "stock": 12
+  },
+  {
+    "id": "7h2m",
+    "title": "Handbag",
+    "price": 2599,
+    "description": "Tan brown faux leather handbag with zip closure, adjustable strap, and spacious compartments.",
+    "brand": "Baggit",
+    "status": "Instock",
+    "stock": 30
+  },
+  {
+    "id": "k5r8",
+    "title": "Sunglasses",
+    "price": 1799,
+    "description": "Aviator-style sunglasses with UV-protected gradient lenses and metal frame. Comes with a hard case.",
+    "brand": "Ray-Ban",
+    "status": "Instock",
+    "stock": 18
+  },
+  {
+    "id": "m3p7",
+    "title": "Backpack",
+    "price": 2199,
+    "description": "Black laptop backpack with padded straps, multiple compartments, and water-resistant material.",
+    "brand": "Wildcraft",
+    "status": "Out of stock",
+    "stock": 0
+  },
+  {
+    "id": "z8q1",
+    "title": "Formal Shoes",
+    "price": 3299,
+    "description": "Brown leather lace-up formal shoes with cushioned footbed and slip-resistant outsole.",
+    "brand": "Clarks",
+    "status": "Instock",
+    "stock": 9
+  },
+  {
+    "id": "r6v4",
+    "title": "Kurta",
+    "price": 1599,
+    "description": "Men’s straight navy blue cotton kurta with mandarin collar, button placket, and side slits.",
+    "brand": "FabIndia",
+    "status": "Out of stock",
+    "stock": 0
+  },
+    {
+      "id": "5d6e",
+      "title": "Jeans",
+      "price": 2499,
+      "description": "Blue solid mid-rise jeans, has a button and zip closure, 5 pockets, straight hem, and is made of cotton blend.",
+      "brand": "Levi's",
+      "status": "Out of stock",
+      "stock": 0
+    },
+    {
+      "id": "5",
+      "title": "Clinique Moisture Surge 72-Hour Auto-Replenishing Hydrator",
+      "price": 3955,
+      "description": "The Clinique Moisture Surge 72-Hour Auto-Replenishing Hydrator is a gel-cream moisturizer that provides intense hydration and helps the skin retain moisture for up to 72 hours.",
+      "brand": "Clinique",
+      "status": "Instock",
+      "stock": 30
+    },
+    {
+      "id": "3371",
+      "title": "Shirt",
+      "price": 18999,
+      "description": "it is made of rare white cotton ",
+      "brand": "USPA",
+      "status": "Instock",
+      "stock": 1
+    }
+  ]
+}

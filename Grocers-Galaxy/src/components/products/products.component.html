@@ -1,0 +1,17 @@
+<div class="navbar">
+  <h1 (click)="gotohome()">Grocers Galaxy</h1>
+  <ul class="navbar-items">
+    <li *ngIf="role == 'admin'" (click)="gotoaddproduct()">Add Product</li>
+    <div class="hover-wrapper" (mouseenter)="showPopup()" (mouseleave)="hidePopup()">
+      <div class="hover-target"><i class="fa-regular fa-circle-user"></i>Profile</div>
+        <div class="hover-popup" *ngIf="isPopupVisible">
+          <p>{{ username }}</p>
+          <p>{{ email }}</p>
+          <p>{{ role }}</p>
+        </div>
+      </div>
+    <button (click)="gotologin()" class="lobtn">Log out<i class="fa loicon fa-sign-out" aria-hidden="true"></i></button>
+  </ul>
+</div>
+
+<app-product-card [products]="products"></app-product-card>
